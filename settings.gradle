@@ -1,0 +1,3 @@
+include ':ShakeLibrary'
+include ':app'
+rootProject.name = "ShakeAndWinLibrary"
