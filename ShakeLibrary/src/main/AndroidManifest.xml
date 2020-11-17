@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.shakelibrary">
 
-    <application
-        android:name=".AppController">
-        <activity android:name=".ShakeActivity"/>
+    <application android:name=".AppController">
+        <activity android:name=".ShakeMainActivity"></activity>
+        <activity android:name=".ShakeActivity" />
     </application>
 
 </manifest>

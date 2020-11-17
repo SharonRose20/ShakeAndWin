@@ -16,23 +16,15 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public class ShakeThePhone extends FrameLayout {
 
-    FrameLayout playNow;
-
     public ShakeThePhone(@NonNull Context context) {
         super(context);
-        init(context);
     }
 
     public ShakeThePhone(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init(context);
     }
 
-    public void init(Context context) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        FrameLayout frameLayout = (FrameLayout) inflater.inflate(R.layout.main_shake_layout, this, false);
-        playNow = frameLayout.findViewById(R.id.playNow);
-        playNow.setOnClickListener(view -> context.startActivity(new Intent(context, ShakeActivity.class)));
-        addView(frameLayout);
+    public static void openShakeAndWinActivity(Context context, String msisdn, String language) {
+        context.startActivity(new Intent(context, ShakeMainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 }
